@@ -1,7 +1,12 @@
-import { expect } from 'chai';
+import assert from "assert";
+import { describe, it } from "mocha";
 
-describe('Async Loader Test', () => {
-  it('should work with async loaders', () => {
-    expect(true).to.be.true;
+function add(a: number, b: number): number {
+  return a + b;
+}
+
+describe("async loaders", () => {
+  it("should work", () => {
+    assert.strictEqual(add(2, 3), 5);
   });
 });
